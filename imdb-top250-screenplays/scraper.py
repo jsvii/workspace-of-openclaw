@@ -41,114 +41,153 @@ class IMSDbScraper:
         return IMSDbScraper._all_scripts_cache
     
     def search_movie(self, movie_title: str) -> Optional[str]:
-        """Search for a movie on IMSDb all-scripts page and return the script URL."""
-        soup = self._get_all_scripts()
+        """Search for a movie on IMSDb using search.php and verify the result."""
+        # Clean the movie title for search
+        search_query = movie_title.strip()
         
-        # Find all script links - format: /Movie Scripts/{title} Script.html
-        links = soup.find_all("a", href=re.compile(r"/Movie Scripts/.+\.html"))
-        
-        title_lower = movie_title.lower().strip()
-        # Remove common prefixes for comparison
-        title_clean = title_lower.replace("the ", "").strip()
-        
-        best_match = None
-        best_score = 0
-        best_exact = False
-        
-        for link in links:
-            href = link.get("href", "")
-            text = link.get_text(strip=True)
+        try:
+            # Search using the search.php endpoint
+            response = self.session.post(
+                f"{IMSDB_BASE_URL}/search.php",
+                data={"search_query": search_query, "submit": "Go!"},
+                timeout=REQUEST_TIMEOUT
+            )
             
-            # Normalize for comparison - remove " Script" suffix
-            text_clean = text.lower().replace(" script", "").replace(", the", "").strip()
+            if response.status_code != 200:
+                return None
             
-            # Check for exact match first
-            if title_clean == text_clean:
-                score = 100
-                exact = True
-            elif title_clean in text_clean or text_clean in title_clean:
-                # Check if it's a proper match (not just substring)
-                score = 80
-                exact = False
-            elif all(word in text_clean for word in title_clean.split() if len(word) > 2):
-                score = 60
-                exact = False
-            else:
-                score = 0
-                exact = False
+            # Parse the search result page
+            soup = BeautifulSoup(response.text, "html.parser")
             
-            # Prefer exact matches
-            if score > best_score or (score == best_score and exact and not best_exact):
-                best_score = score
-                best_exact = exact
-                best_match = (text, href)
-        
-        if best_match and best_score >= 60:
-            original_title, href = best_match
+            # Use the same DOM expression: table td[valign="top"][2]
+            tables = soup.find_all('table')
+            main_block = None
             
-            # Convert /Movie Scripts/Title Script.html -> /scripts/title-with-dashes.html
-            script_title = original_title.replace(" Script.html", "")
+            for table in tables:
+                tds = table.find_all('td', attrs={'valign': 'top'})
+                if len(tds) >= 3:
+                    main_block = tds[2]
+                    break
             
-            # Handle ", The" suffix - convert to ",The" (no space before comma)
-            if script_title.endswith(", The"):
-                script_title = script_title[:-5].strip()  # Remove ", The"
-                scripts_format = script_title.replace(" ", "-") + ",The"
-            else:
-                scripts_format = script_title.replace(" ", "-")
+            if not main_block:
+                return None
             
-            scripts_url = f"{IMSDB_BASE_URL}/scripts/{scripts_format}.html"
+            # Find all links in the main block
+            links = main_block.find_all('a', href=True)
             
-            # Verify this URL has screenplay content
-            if self._verify_script_url(scripts_url):
-                return scripts_url
+            # Filter for movie intro pages (not transcript pages)
+            movie_links = []
+            for link in links:
+                href = link.get('href', '')
+                text = link.get_text(strip=True)
+                # Look for /Movie Scripts/ links (intro pages)
+                if '/movie/' in href.lower() or '/Movie Scripts/' in href:
+                    movie_links.append({'href': href, 'text': text})
             
-            # Try alternative format with hyphen before comma
-            if ",The" in scripts_format:
-                alt_format = scripts_format.replace(",The", ",-The")
-                alt_url = f"{IMSDB_BASE_URL}/scripts/{alt_format}.html"
-                if self._verify_script_url(alt_url):
-                    return alt_url
-        
-        return None
+            if not movie_links:
+                return None
+            
+            # Score the links to find best match
+            title_lower = movie_title.lower().strip()
+            title_clean = title_lower.replace('the ', '').strip()
+            
+            best_match = None
+            best_score = 0
+            
+            for link_data in movie_links:
+                href = link_data['href']
+                text = link_data['text'].lower().replace(' script', '').strip()
+                
+                # Calculate match score
+                if title_clean == text:
+                    score = 100
+                elif title_clean in text or text in title_clean:
+                    score = 80
+                elif all(word in text for word in title_clean.split() if len(word) > 2):
+                    score = 60
+                else:
+                    score = 0
+                
+                if score > best_score:
+                    best_score = score
+                    best_match = href
+            
+            if best_match and best_score >= 60:
+                # Visit the intro page to get transcript URL
+                intro_url = IMSDB_BASE_URL + best_match if best_match.startswith('/') else best_match
+                transcript_url = self._get_transcript_from_intro_page(intro_url, movie_title)
+                
+                if transcript_url:
+                    return transcript_url
+            
+            return None
+            
+        except Exception as e:
+            print(f"Search error: {e}")
+            return None
     
-    def _verify_script_url(self, url: str) -> bool:
+    def _get_transcript_from_intro_page(self, intro_url: str, movie_title: str) -> Optional[str]:
+        """Visit the movie intro page and get transcript URL using .script-details a[href^='/transcripts']"""
+        try:
+            response = self.session.get(intro_url, timeout=REQUEST_TIMEOUT)
+            if response.status_code != 200:
+                return None
+            
+            soup = BeautifulSoup(response.text, "html.parser")
+            
+            # Use .script-details a[href^="/transcripts"] to find transcript link
+            script_details = soup.select('.script-details')
+            
+            if script_details:
+                links = script_details[0].select('a[href^="/transcripts"]')
+                if links:
+                    href = links[0].get('href', '')
+                    if href:
+                        return IMSDB_BASE_URL + href
+            
+            return None
+            
+        except Exception as e:
+            return None
+    
+    def _verify_script_url(self, url: str, movie_title: str = "") -> bool:
         """Check if the URL has actual screenplay content in a <pre> tag."""
         try:
-            # Use GET instead of HEAD (some servers don't handle HEAD well)
             response = self.session.get(url, timeout=REQUEST_TIMEOUT)
             if response.status_code != 200:
                 return False
             
             # Check for <pre> tag with substantial content
-            import re
             pres = re.findall(r'<pre[^>]*>(.*?)</pre>', response.text, re.DOTALL)
-            if pres and len(pres[0].strip()) > 100:
-                return True
+            if not pres or len(pres[0].strip()) < 100:
+                return False
+            
+            # If movie_title provided, check if it's in the top area of <pre>
+            if movie_title:
+                pre_content = pres[0][:1000]  # Check first 1000 chars
+                # Check if title appears (case insensitive)
+                title_words = movie_title.lower().split()
+                # Check if most title words are in the first part
+                matches = sum(1 for word in title_words if word in pre_content.lower())
+                if matches < len(title_words) * 0.5:
+                    return False
+            
+            return True
+            
         except:
             pass
         return False
     
     def get_script_url_by_title(self, movie_title: str) -> Optional[str]:
         """Try to construct the direct URL for the movie script (fallback)."""
-        # Try the new format: /scripts/Title,-The.html
-        # "The Shawshank Redemption" -> "Shawshank-Redemption,-The"
-        formatted_title = movie_title.replace("'", "'").strip()
+        # Simply format the title with dashes
+        formatted_title = movie_title.replace("'", "'").replace(" ", "-").strip()
         
-        if formatted_title.lower().startswith("the "):
-            # Move "The" to the end: "The Shawshank Redemption" -> "Shawshank-Redemption,-The"
-            rest = formatted_title[4:]
-            formatted = f"{rest.replace(' ', '-')},-The"
-        else:
-            formatted = formatted_title.replace(" ", "-")
+        direct_url = f"{IMSDB_BASE_URL}/scripts/{formatted_title}.html"
         
-        direct_url = f"{IMSDB_BASE_URL}/scripts/{formatted}.html"
-        
-        try:
-            response = self.session.head(direct_url, timeout=REQUEST_TIMEOUT, allow_redirects=True)
-            if response.status_code == 200:
-                return direct_url
-        except requests.RequestException:
-            pass
+        # Verify the URL has actual screenplay content
+        if self._verify_script_url(direct_url, movie_title):
+            return direct_url
         
         return None
     
@@ -359,8 +398,10 @@ def scrape_all_screenplays():
     for i, movie in enumerate(movies):
         print(f"[{i+1}/{len(movies)}] {movie.title} ({movie.year})...", end=" ", flush=True)
         
+        # First try direct URL construction
         script_url = imsdb_scraper.get_script_url_by_title(movie.title)
         
+        # If not found, use search
         if not script_url:
             script_url = imsdb_scraper.search_movie(movie.title)
         
@@ -369,9 +410,9 @@ def scrape_all_screenplays():
             movie.imsdb_url = script_url
             results.append(movie)
         else:
-            print("✗ Not found")
+            print(f"✗ Not found")
 
-        print(f"the actaull url is {script_url}")
+        print(f"  Actual URL: {script_url}")
         
         time.sleep(DELAY_BETWEEN_REQUESTS)
     
