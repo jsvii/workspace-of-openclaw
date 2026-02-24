@@ -1,0 +1,767 @@
+============================================================
+IMDb Top 250 Screenplays Scraper
+============================================================
+
+[1/4] Scraping IMDb Top 250 movies...
+Fetching IMDb Top 250 page...
+Found 250 movies, fetching details...
+  [1/250] Fetching tt0111161... The Shawshank Redemption (1994)
+  [2/250] Fetching tt0068646... The Godfather (1972)
+  [3/250] Fetching tt0468569... The Dark Knight (2008)
+  [4/250] Fetching tt0071562... The Godfather Part II (1974)
+  [5/250] Fetching tt0050083... 12 Angry Men (1957)
+  [6/250] Fetching tt0167260... The Lord of the Rings: The Return of the King (2003)
+  [7/250] Fetching tt0108052... Schindler&apos;s List (1994)
+  [8/250] Fetching tt0120737... The Lord of the Rings: The Fellowship of the Ring (2001)
+  [9/250] Fetching tt0110912... Pulp Fiction (1994)
+  [10/250] Fetching tt0060196... Il buono, il brutto, il cattivo (1967)
+  [11/250] Fetching tt0167261... The Lord of the Rings: The Two Towers (2002)
+  [12/250] Fetching tt0109830... Forrest Gump (1994)
+  [13/250] Fetching tt0137523... Fight Club (1999)
+  [14/250] Fetching tt1375666... Inception (2010)
+  [15/250] Fetching tt0080684... Star Wars: Episode V - The Empire Strikes Back (1980)
+  [16/250] Fetching tt0133093... The Matrix (1999)
+  [17/250] Fetching tt0099685... GoodFellas (1990)
+  [18/250] Fetching tt0816692... Interstellar (2014)
+  [19/250] Fetching tt0073486... One Flew Over the Cuckoo&apos;s Nest (1975)
+  [20/250] Fetching tt0114369... Se7en (1995)
+  [21/250] Fetching tt0038650... It&apos;s a Wonderful Life (1947)
+  [22/250] Fetching tt0102926... The Silence of the Lambs (1991)
+  [23/250] Fetching tt0047478... Shichinin no samurai (1956)
+  [24/250] Fetching tt0120815... Saving Private Ryan (1998)
+  [25/250] Fetching tt0120689... The Green Mile (1999)
+  [26/250] Fetching tt0317248... Cidade de Deus (2004)
+  [27/250] Fetching tt0118799... La vita è bella (1997)
+  [28/250] Fetching tt0103064... Terminator 2: Judgment Day (1991)
+  [29/250] Fetching tt0076759... Star Wars (1977)
+  [30/250] Fetching tt0088763... Back to the Future (1985)
+  [31/250] Fetching tt0245429... Sen to Chihiro no kamikakushi (2003)
+  [32/250] Fetching tt0253474... The Pianist (2003)
+  [33/250] Fetching tt0172495... Gladiator (2000)
+  [34/250] Fetching tt6751668... Gisaengchung (2019)
+  [35/250] Fetching tt0095327... Hotaru no haka (1989)
+  [36/250] Fetching tt0054215... Psycho (1960)
+  [37/250] Fetching tt0110357... The Lion King (1994)
+  [38/250] Fetching tt0056058... Seppuku (1964)
+  [39/250] Fetching tt0407887... The Departed (2006)
+  [40/250] Fetching tt2582802... Whiplash (2014)
+  [41/250] Fetching tt0482571... The Prestige (2006)
+  [42/250] Fetching tt0120586... American History X (1998)
+  [43/250] Fetching tt0110413... Léon (1994)
+  [44/250] Fetching tt9362722... Spider-Man: Across the Spider-Verse (2023)
+  [45/250] Fetching tt0095765... Nuovo Cinema Paradiso (1990)
+  [46/250] Fetching tt0034583... Casablanca (1943)
+  [47/250] Fetching tt1675434... Intouchables (2011)
+  [48/250] Fetching tt0114814... The Usual Suspects (1995)
+  [49/250] Fetching tt0078748... Alien (1979)
+  [50/250] Fetching tt1853728... Django Unchained (2012)
+  [51/250] Fetching tt0027977... Modern Times (1936)
+  [52/250] Fetching tt0047396... Rear Window (1954)
+  [53/250] Fetching tt0064116... C&apos;era una volta il West (1969)
+  [54/250] Fetching tt0021749... City Lights (1931)
+  [55/250] Fetching tt0078788... Apocalypse Now (1979)
+  [56/250] Fetching tt0910970... WALL·E (2008)
+  [57/250] Fetching tt0209144... Memento (2001)
+  [58/250] Fetching tt15239678... Dune: Part Two (2024)
+  [59/250] Fetching tt0082971... Raiders of the Lost Ark (1981)
+  [60/250] Fetching tt4154756... Avengers: Infinity War (2018)
+  [61/250] Fetching tt0405094... Das Leben der Anderen (2007)
+  [62/250] Fetching tt4633694... Spider-Man: Into the Spider-Verse (2018)
+  [63/250] Fetching tt0043014... Sunset Blvd. (1950)
+  [64/250] Fetching tt0051201... Witness for the Prosecution (1958)
+  [65/250] Fetching tt0050825... Paths of Glory (1957)
+  [66/250] Fetching tt0081505... The Shining (1980)
+  [67/250] Fetching tt0032553... The Great Dictator (1941)
+  [68/250] Fetching tt0361748... Inglourious Basterds (2009)
+  [69/250] Fetching tt23849204... 12th Fail (2023)
+  [70/250] Fetching tt0090605... Aliens (1986)
+  [71/250] Fetching tt0057565... Tengoku to jigoku (1963)
+  [72/250] Fetching tt1345836... The Dark Knight Rises (2012)
+  [73/250] Fetching tt4154796... Avengers: Endgame (2019)
+  [74/250] Fetching tt0119217... Good Will Hunting (1998)
+  [75/250] Fetching tt2380307... Coco (2017)
+  [76/250] Fetching tt0086879... Amadeus (1984)
+  [77/250] Fetching tt0114709... Toy Story (1995)
+  [78/250] Fetching tt5311514... Kimi no na wa. (2017)
+  [79/250] Fetching tt0082096... Das Boot (1982)
+  [80/250] Fetching tt0364569... Oldeuboi (2003)
+  [81/250] Fetching tt0112573... Braveheart (1995)
+  [82/250] Fetching tt0119698... Mononoke-hime (1997)
+  [83/250] Fetching tt0057012... Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)
+  [84/250] Fetching tt1187043... 3 Idiots (2009)
+  [85/250] Fetching tt0169547... American Beauty (1999)
+  [86/250] Fetching tt8267604... Capharnaüm (2018)
+  [87/250] Fetching tt0045152... Singin&apos; in the Rain (1952)
+  [88/250] Fetching tt7286456... Joker (2019)
+  [89/250] Fetching tt0087843... C&apos;era una volta in America (1984)
+  [90/250] Fetching tt0091251... Idi i smotri (1985)
+  [91/250] Fetching tt0086190... Star Wars: Episode VI - Return of the Jedi (1983)
+  [92/250] Fetching tt0180093... Requiem for a Dream (2000)
+  [93/250] Fetching tt0435761... Toy Story 3 (2010)
+  [94/250] Fetching tt0044741... Ikiru (1956)
+  [95/250] Fetching tt2106476... Jagten (2012)
+  [96/250] Fetching tt1255953... Incendies (2011)
+  [97/250] Fetching tt0338013... Eternal Sunshine of the Spotless Mind (2004)
+  [98/250] Fetching tt0053604... The Apartment (1960)
+  [99/250] Fetching tt0056172... Lawrence of Arabia (1962)
+  [100/250] Fetching tt0062622... 2001: A Space Odyssey (1968)
+  [101/250] Fetching tt0105236... Reservoir Dogs (1992)
+  [102/250] Fetching tt0113277... Heat (1995)
+  [103/250] Fetching tt0086250... Scarface (1983)
+  [104/250] Fetching tt0036775... Double Indemnity (1944)
+  [105/250] Fetching tt1049413... Up (2009)
+  [106/250] Fetching tt0053125... North by Northwest (1959)
+  [107/250] Fetching tt0986264... Taare Zameen Par (2007)
+  [108/250] Fetching tt0093058... Full Metal Jacket (1987)
+  [109/250] Fetching tt0022100... M - Eine Stadt sucht einen Mörder (1931)
+  [110/250] Fetching tt0033467... Citizen Kane (1941)
+  [111/250] Fetching tt0211915... Le fabuleux destin d&apos;Amélie Poulain (2002)
+  [112/250] Fetching tt0052357... Vertigo (1958)
+  [113/250] Fetching tt1832382... Jodaeiye Nader az Simin (2011)
+  [114/250] Fetching tt0095016... Die Hard (1988)
+  [115/250] Fetching tt0056592... To Kill a Mockingbird (1963)
+  [116/250] Fetching tt0070735... The Sting (1973)
+  [117/250] Fetching tt0097576... Indiana Jones and the Last Crusade (1989)
+  [118/250] Fetching tt0066921... A Clockwork Orange (1972)
+  [119/250] Fetching tt0017136... Metropolis (1927)
+  [120/250] Fetching tt8579674... 1917 (2020)
+  [121/250] Fetching tt0208092... Snatch (2001)
+  [122/250] Fetching tt0119488... L.A. Confidential (1997)
+  [123/250] Fetching tt0363163... Der Untergang (2005)
+  [124/250] Fetching tt0993846... The Wolf of Wall Street (2013)
+  [125/250] Fetching tt5074352... Dangal (2016)
+  [126/250] Fetching tt0040522... Ladri di biciclette (1949)
+  [127/250] Fetching tt0120382... The Truman Show (1998)
+  [128/250] Fetching tt15398776... Oppenheimer (2023)
+  [129/250] Fetching tt6966692... Green Book (2018)
+  [130/250] Fetching tt1130884... Shutter Island (2010)
+  [131/250] Fetching tt0055031... Judgment at Nuremberg (1961)
+  [132/250] Fetching tt0372784... Batman Begins (2005)
+  [133/250] Fetching tt8503618... Hamilton (2020)
+  [134/250] Fetching tt0059578... Per qualche dollaro in più (1967)
+  [135/250] Fetching tt0075314... Taxi Driver (1976)
+  [136/250] Fetching tt0107290... Jurassic Park (1993)
+  [137/250] Fetching tt0053291... Some Like It Hot (1959)
+  [138/250] Fetching tt0469494... There Will Be Blood (2008)
+  [139/250] Fetching tt0012349... The Kid (1921)
+  [140/250] Fetching tt10272386... The Father (2021)
+  [141/250] Fetching tt0042192... All About Eve (1950)
+  [142/250] Fetching tt0167404... The Sixth Sense (1999)
+  [143/250] Fetching tt0089881... Ran (1985)
+  [144/250] Fetching tt0112641... Casino (1995)
+  [145/250] Fetching tt0477348... No Country for Old Men (2007)
+  [146/250] Fetching tt0084787... The Thing (1982)
+  [147/250] Fetching tt1745960... Top Gun: Maverick (2022)
+  [148/250] Fetching tt1392214... Prisoners (2013)
+  [149/250] Fetching tt0266697... Kill Bill: Vol. 1 (2003)
+  [150/250] Fetching tt0457430... El laberinto del fauno (2007)
+  [151/250] Fetching tt0105695... Unforgiven (1992)
+  [152/250] Fetching tt0268978... A Beautiful Mind (2002)
+  [153/250] Fetching tt0040897... The Treasure of the Sierra Madre (1948)
+  [154/250] Fetching tt0347149... Hauru no ugoku shiro (2005)
+  [155/250] Fetching tt0266543... Finding Nemo (2003)
+  [156/250] Fetching tt0055630... Yôjinbô (1961)
+  [157/250] Fetching tt4729430... Klaus (2019)
+  [158/250] Fetching tt0057115... The Great Escape (1963)
+  [159/250] Fetching tt0080678... The Elephant Man (1980)
+  [160/250] Fetching tt0071853... Monty Python and the Holy Grail (1975)
+  [161/250] Fetching tt0346336... La meglio gioventù (2003)
+  [162/250] Fetching tt0046912... Dial M for Murder (1954)
+  [163/250] Fetching tt32820897... Gekijô-ban Kimetsu no Yaiba Mugen Jô-hen (2025)
+  [164/250] Fetching tt0031381... Gone with the Wind (1940)
+  [165/250] Fetching tt1305806... El secreto de sus ojos (2010)
+  [166/250] Fetching tt0071315... Chinatown (1974)
+  [167/250] Fetching tt0120735... Lock, Stock and Two Smoking Barrels (1998)
+  [168/250] Fetching tt0434409... V for Vendetta (2006)
+  [169/250] Fetching tt0264464... Catch Me If You Can (2002)
+  [170/250] Fetching tt2096673... Inside Out (2015)
+  [171/250] Fetching tt0042876... Rashômon (1951)
+  [172/250] Fetching tt0252488... Hababam Sinifi: Sinifta Kaldi (1975)
+  [173/250] Fetching tt5027774... Three Billboards Outside Ebbing, Missouri (2017)
+  [174/250] Fetching tt0117951... Trainspotting (1996)
+  [175/250] Fetching tt0050212... The Bridge on the River Kwai (1957)
+  [176/250] Fetching tt1201607... Harry Potter and the Deathly Hallows: Part 2 (2011)
+  [177/250] Fetching tt0097165... Dead Poets Society (1989)
+  [178/250] Fetching tt29623480... The Wild Robot (2024)
+  [179/250] Fetching tt1291584... Warrior (2011)
+  [180/250] Fetching tt0116282... Fargo (1996)
+  [181/250] Fetching tt0072684... Barry Lyndon (1975)
+  [182/250] Fetching tt0081398... Raging Bull (1980)
+  [183/250] Fetching tt0052618... Ben-Hur (1959)
+  [184/250] Fetching tt0405159... Million Dollar Baby (2005)
+  [185/250] Fetching tt1392190... Mad Max: Fury Road (2015)
+  [186/250] Fetching tt0118849... Bacheha-ye aseman (1999)
+  [187/250] Fetching tt2119532... Hacksaw Ridge (2016)
+  [188/250] Fetching tt1205489... Gran Torino (2009)
+  [189/250] Fetching tt0096283... Tonari no Totoro (1990)
+  [190/250] Fetching tt2024544... 12 Years a Slave (2013)
+  [191/250] Fetching tt2278388... The Grand Budapest Hotel (2014)
+  [192/250] Fetching tt0382932... Ratatouille (2007)
+  [193/250] Fetching tt0112471... Before Sunrise (1995)
+  [194/250] Fetching tt0353969... Salinui chueok (2003)
+  [195/250] Fetching tt0083658... Blade Runner (1982)
+  [196/250] Fetching tt0892769... How to Train Your Dragon (2010)
+  [197/250] Fetching tt10872600... Spider-Man: No Way Home (2021)
+  [198/250] Fetching tt2267998... Gone Girl (2014)
+  [199/250] Fetching tt0198781... Monsters, Inc. (2001)
+  [200/250] Fetching tt0073195... Jaws (1975)
+  [201/250] Fetching tt0107207... In the Name of the Father (1994)
+  [202/250] Fetching tt1950186... Ford v Ferrari (2019)
+  [203/250] Fetching tt3011894... Relatos salvajes (2014)
+  [204/250] Fetching tt0015864... The Gold Rush (1925)
+  [205/250] Fetching tt0978762... Mary and Max. (2009)
+  [206/250] Fetching tt0015324... Sherlock Jr. (1924)
+  [207/250] Fetching tt0077416... The Deer Hunter (1979)
+  [208/250] Fetching tt0046268... Le salaire de la peur (1955)
+  [209/250] Fetching tt0017925... The General (1927)
+  [210/250] Fetching tt3315342... Logan (2017)
+  [211/250] Fetching tt0075148... Rocky (1976)
+  [212/250] Fetching tt0031679... Mr. Smith Goes to Washington (1939)
+  [213/250] Fetching tt0047296... On the Waterfront (1954)
+  [214/250] Fetching tt0046438... Tôkyô monogatari (1972)
+  [215/250] Fetching tt0325980... Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+  [216/250] Fetching tt0050986... Smultronstället (1959)
+  [217/250] Fetching tt1895587... Spotlight (2015)
+  [218/250] Fetching tt0113247... La haine (1996)
+  [219/250] Fetching tt5323662... Koe no katachi (2016)
+  [220/250] Fetching tt0088247... The Terminator (1984)
+  [221/250] Fetching tt0041959... The Third Man (1950)
+  [222/250] Fetching tt26548265... Maharaja (2024)
+  [223/250] Fetching tt0059742... The Sound of Music (1965)
+  [224/250] Fetching tt15097216... Jai Bhim (2021)
+  [225/250] Fetching tt0118715... The Big Lebowski (1998)
+  [226/250] Fetching tt0036868... The Best Years of Our Lives (1947)
+  [227/250] Fetching tt0050976... Det sjunde inseglet (1958)
+  [228/250] Fetching tt3170832... Room (2016)
+  [229/250] Fetching tt0381681... Before Sunset (2004)
+  [230/250] Fetching tt0395169... Hotel Rwanda (2005)
+  [231/250] Fetching tt0091763... Platoon (1986)
+  [232/250] Fetching tt0317705... The Incredibles (2004)
+  [233/250] Fetching tt30472557... Gekijô-ban Chensô Man Reze-hen (2025)
+  [234/250] Fetching tt1028532... Hachi: A Dog&apos;s Tale (2010)
+  [235/250] Fetching tt0070047... The Exorcist (1973)
+  [236/250] Fetching tt1979320... Rush (2013)
+  [237/250] Fetching tt0032138... The Wizard of Oz (1939)
+  [238/250] Fetching tt0092005... Stand by Me (1986)
+  [239/250] Fetching tt0129167... The Iron Giant (1999)
+  [240/250] Fetching tt0019254... La passion de Jeanne d&apos;Arc (1928)
+  [241/250] Fetching tt0476735... Babam ve Oglum (2005)
+  [242/250] Fetching tt0058946... La battaglia di Algeri (1967)
+  [243/250] Fetching tt4016934... Ah-ga-ssi (2017)
+  [244/250] Fetching tt0074958... Network (1976)
+  [245/250] Fetching tt0035446... To Be or Not to Be (1942)
+  [246/250] Fetching tt1954470... Gangs of Wasseypur (2012)
+  [247/250] Fetching tt4430212... Drishyam (2015)
+  [248/250] Fetching tt0032551... The Grapes of Wrath (1940)
+  [249/250] Fetching tt1454029... The Help (2011)
+  [250/250] Fetching tt3417422... Drishyam (2013)
+Found 250 movies
+
+[2/4] Searching for screenplays on IMSDb...
+  [1/250] The Shawshank Redemption (1994)... ✓ Found
+  [2/250] The Godfather (1972)... ✓ Found
+  [3/250] The Dark Knight (2008)... ✗ Not found
+  [4/250] The Godfather Part II (1974)... ✓ Found
+  [5/250] 12 Angry Men (1957)... ✓ Found
+  [6/250] The Lord of the Rings: The Return of the King (2003)... ✓ Found
+  [7/250] Schindler&apos;s List (1994)... ✓ Found
+  [8/250] The Lord of the Rings: The Fellowship of the Ring (2001)... ✓ Found
+  [9/250] Pulp Fiction (1994)... ✓ Found
+  [10/250] Il buono, il brutto, il cattivo (1967)... ✓ Found
+  [11/250] The Lord of the Rings: The Two Towers (2002)... ✓ Found
+  [12/250] Forrest Gump (1994)... ✓ Found
+  [13/250] Fight Club (1999)... ✓ Found
+  [14/250] Inception (2010)... ✓ Found
+  [15/250] Star Wars: Episode V - The Empire Strikes Back (1980)... ✓ Found
+  [16/250] The Matrix (1999)... ✓ Found
+  [17/250] GoodFellas (1990)... ✗ Not found
+  [18/250] Interstellar (2014)... ✓ Found
+  [19/250] One Flew Over the Cuckoo&apos;s Nest (1975)... ✓ Found
+  [20/250] Se7en (1995)... ✓ Found
+  [21/250] It&apos;s a Wonderful Life (1947)... ✓ Found
+  [22/250] The Silence of the Lambs (1991)... ✓ Found
+  [23/250] Shichinin no samurai (1956)... ✓ Found
+  [24/250] Saving Private Ryan (1998)... ✓ Found
+  [25/250] The Green Mile (1999)... ✓ Found
+  [26/250] Cidade de Deus (2004)... ✓ Found
+  [27/250] La vita è bella (1997)... ✓ Found
+  [28/250] Terminator 2: Judgment Day (1991)... ✓ Found
+  [29/250] Star Wars (1977)... ✓ Found
+  [30/250] Back to the Future (1985)... ✓ Found
+  [31/250] Sen to Chihiro no kamikakushi (2003)... ✓ Found
+  [32/250] The Pianist (2003)... ✓ Found
+  [33/250] Gladiator (2000)... ✓ Found
+  [34/250] Gisaengchung (2019)... ✓ Found
+  [35/250] Hotaru no haka (1989)... ✓ Found
+  [36/250] Psycho (1960)... ✓ Found
+  [37/250] The Lion King (1994)... ✓ Found
+  [38/250] Seppuku (1964)... ✓ Found
+  [39/250] The Departed (2006)... ✓ Found
+  [40/250] Whiplash (2014)... ✓ Found
+  [41/250] The Prestige (2006)... ✓ Found
+  [42/250] American History X (1998)... ✓ Found
+  [43/250] Léon (1994)... ✓ Found
+  [44/250] Spider-Man: Across the Spider-Verse (2023)... ✓ Found
+  [45/250] Nuovo Cinema Paradiso (1990)... ✓ Found
+  [46/250] Casablanca (1943)... ✗ Not found
+  [47/250] Intouchables (2011)... ✓ Found
+  [48/250] The Usual Suspects (1995)... ✓ Found
+  [49/250] Alien (1979)... ✓ Found
+  [50/250] Django Unchained (2012)... ✓ Found
+  [51/250] Modern Times (1936)... ✓ Found
+  [52/250] Rear Window (1954)... ✓ Found
+  [53/250] C&apos;era una volta il West (1969)... ✓ Found
+  [54/250] City Lights (1931)... ✓ Found
+  [55/250] Apocalypse Now (1979)... ✓ Found
+  [56/250] WALL·E (2008)... ✓ Found
+  [57/250] Memento (2001)... ✓ Found
+  [58/250] Dune: Part Two (2024)... ✓ Found
+  [59/250] Raiders of the Lost Ark (1981)... ✓ Found
+  [60/250] Avengers: Infinity War (2018)... ✓ Found
+  [61/250] Das Leben der Anderen (2007)... ✓ Found
+  [62/250] Spider-Man: Into the Spider-Verse (2018)... ✓ Found
+  [63/250] Sunset Blvd. (1950)... ✓ Found
+  [64/250] Witness for the Prosecution (1958)... ✓ Found
+  [65/250] Paths of Glory (1957)... ✓ Found
+  [66/250] The Shining (1980)... ✓ Found
+  [67/250] The Great Dictator (1941)... ✓ Found
+  [68/250] Inglourious Basterds (2009)... ✓ Found
+  [69/250] 12th Fail (2023)... ✓ Found
+  [70/250] Aliens (1986)... ✓ Found
+  [71/250] Tengoku to jigoku (1963)... ✓ Found
+  [72/250] The Dark Knight Rises (2012)... ✓ Found
+  [73/250] Avengers: Endgame (2019)... ✓ Found
+  [74/250] Good Will Hunting (1998)... ✓ Found
+  [75/250] Coco (2017)... ✓ Found
+  [76/250] Amadeus (1984)... ✓ Found
+  [77/250] Toy Story (1995)... ✓ Found
+  [78/250] Kimi no na wa. (2017)... ✓ Found
+  [79/250] Das Boot (1982)... ✓ Found
+  [80/250] Oldeuboi (2003)... ✓ Found
+  [81/250] Braveheart (1995)... ✓ Found
+  [82/250] Mononoke-hime (1997)... ✓ Found
+  [83/250] Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)... ✓ Found
+  [84/250] 3 Idiots (2009)... ✓ Found
+  [85/250] American Beauty (1999)... ✓ Found
+  [86/250] Capharnaüm (2018)... ✓ Found
+  [87/250] Singin&apos; in the Rain (1952)... ✓ Found
+  [88/250] Joker (2019)... ✓ Found
+  [89/250] C&apos;era una volta in America (1984)... ✓ Found
+  [90/250] Idi i smotri (1985)... ✓ Found
+  [91/250] Star Wars: Episode VI - Return of the Jedi (1983)... ✓ Found
+  [92/250] Requiem for a Dream (2000)... ✓ Found
+  [93/250] Toy Story 3 (2010)... ✓ Found
+  [94/250] Ikiru (1956)... ✓ Found
+  [95/250] Jagten (2012)... ✓ Found
+  [96/250] Incendies (2011)... ✓ Found
+  [97/250] Eternal Sunshine of the Spotless Mind (2004)... ✓ Found
+  [98/250] The Apartment (1960)... ✓ Found
+  [99/250] Lawrence of Arabia (1962)... ✓ Found
+  [100/250] 2001: A Space Odyssey (1968)... ✓ Found
+  [101/250] Reservoir Dogs (1992)... ✓ Found
+  [102/250] Heat (1995)... ✓ Found
+  [103/250] Scarface (1983)... ✓ Found
+  [104/250] Double Indemnity (1944)... ✓ Found
+  [105/250] Up (2009)... ✓ Found
+  [106/250] North by Northwest (1959)... ✓ Found
+  [107/250] Taare Zameen Par (2007)... ✓ Found
+  [108/250] Full Metal Jacket (1987)... ✗ Not found
+  [109/250] M - Eine Stadt sucht einen Mörder (1931)... ✓ Found
+  [110/250] Citizen Kane (1941)... ✓ Found
+  [111/250] Le fabuleux destin d&apos;Amélie Poulain (2002)... ✓ Found
+  [112/250] Vertigo (1958)... ✓ Found
+  [113/250] Jodaeiye Nader az Simin (2011)... ✓ Found
+  [114/250] Die Hard (1988)... ✓ Found
+  [115/250] To Kill a Mockingbird (1963)... ✓ Found
+  [116/250] The Sting (1973)... ✓ Found
+  [117/250] Indiana Jones and the Last Crusade (1989)... ✓ Found
+  [118/250] A Clockwork Orange (1972)... ✓ Found
+  [119/250] Metropolis (1927)... ✓ Found
+  [120/250] 1917 (2020)... ✓ Found
+  [121/250] Snatch (2001)... ✓ Found
+  [122/250] L.A. Confidential (1997)... ✓ Found
+  [123/250] Der Untergang (2005)... ✓ Found
+  [124/250] The Wolf of Wall Street (2013)... ✓ Found
+  [125/250] Dangal (2016)... ✓ Found
+  [126/250] Ladri di biciclette (1949)... ✓ Found
+  [127/250] The Truman Show (1998)... ✓ Found
+  [128/250] Oppenheimer (2023)... ✓ Found
+  [129/250] Green Book (2018)... ✓ Found
+  [130/250] Shutter Island (2010)... ✓ Found
+  [131/250] Judgment at Nuremberg (1961)... ✓ Found
+  [132/250] Batman Begins (2005)... ✗ Not found
+  [133/250] Hamilton (2020)... ✓ Found
+  [134/250] Per qualche dollaro in più (1967)... ✓ Found
+  [135/250] Taxi Driver (1976)... ✓ Found
+  [136/250] Jurassic Park (1993)... ✓ Found
+  [137/250] Some Like It Hot (1959)... ✓ Found
+  [138/250] There Will Be Blood (2008)... ✓ Found
+  [139/250] The Kid (1921)... ✓ Found
+  [140/250] The Father (2021)... ✓ Found
+  [141/250] All About Eve (1950)... ✓ Found
+  [142/250] The Sixth Sense (1999)... ✓ Found
+  [143/250] Ran (1985)... ✓ Found
+  [144/250] Casino (1995)... ✓ Found
+  [145/250] No Country for Old Men (2007)... ✓ Found
+  [146/250] The Thing (1982)... ✓ Found
+  [147/250] Top Gun: Maverick (2022)... ✓ Found
+  [148/250] Prisoners (2013)... ✓ Found
+  [149/250] Kill Bill: Vol. 1 (2003)... ✓ Found
+  [150/250] El laberinto del fauno (2007)... ✓ Found
+  [151/250] Unforgiven (1992)... ✗ Not found
+  [152/250] A Beautiful Mind (2002)... ✓ Found
+  [153/250] The Treasure of the Sierra Madre (1948)... ✓ Found
+  [154/250] Hauru no ugoku shiro (2005)... ✓ Found
+  [155/250] Finding Nemo (2003)... ✓ Found
+  [156/250] Yôjinbô (1961)... ✓ Found
+  [157/250] Klaus (2019)... ✓ Found
+  [158/250] The Great Escape (1963)... ✓ Found
+  [159/250] The Elephant Man (1980)... ✓ Found
+  [160/250] Monty Python and the Holy Grail (1975)... ✓ Found
+  [161/250] La meglio gioventù (2003)... ✓ Found
+  [162/250] Dial M for Murder (1954)... ✓ Found
+  [163/250] Gekijô-ban Kimetsu no Yaiba Mugen Jô-hen (2025)... ✓ Found
+  [164/250] Gone with the Wind (1940)... ✓ Found
+  [165/250] El secreto de sus ojos (2010)... ✓ Found
+  [166/250] Chinatown (1974)... ✓ Found
+  [167/250] Lock, Stock and Two Smoking Barrels (1998)... ✓ Found
+  [168/250] V for Vendetta (2006)... ✓ Found
+  [169/250] Catch Me If You Can (2002)... ✓ Found
+  [170/250] Inside Out (2015)... ✓ Found
+  [171/250] Rashômon (1951)... ✓ Found
+  [172/250] Hababam Sinifi: Sinifta Kaldi (1975)... ✓ Found
+  [173/250] Three Billboards Outside Ebbing, Missouri (2017)... ✓ Found
+  [174/250] Trainspotting (1996)... ✓ Found
+  [175/250] The Bridge on the River Kwai (1957)... ✓ Found
+  [176/250] Harry Potter and the Deathly Hallows: Part 2 (2011)... ✓ Found
+  [177/250] Dead Poets Society (1989)... ✓ Found
+  [178/250] The Wild Robot (2024)... ✓ Found
+  [179/250] Warrior (2011)... ✓ Found
+  [180/250] Fargo (1996)... ✓ Found
+  [181/250] Barry Lyndon (1975)... ✓ Found
+  [182/250] Raging Bull (1980)... ✓ Found
+  [183/250] Ben-Hur (1959)... ✓ Found
+  [184/250] Million Dollar Baby (2005)... ✓ Found
+  [185/250] Mad Max: Fury Road (2015)... ✓ Found
+  [186/250] Bacheha-ye aseman (1999)... ✓ Found
+  [187/250] Hacksaw Ridge (2016)... ✓ Found
+  [188/250] Gran Torino (2009)... ✓ Found
+  [189/250] Tonari no Totoro (1990)... ✓ Found
+  [190/250] 12 Years a Slave (2013)... ✓ Found
+  [191/250] The Grand Budapest Hotel (2014)... ✓ Found
+  [192/250] Ratatouille (2007)... ✓ Found
+  [193/250] Before Sunrise (1995)... ✓ Found
+  [194/250] Salinui chueok (2003)... ✓ Found
+  [195/250] Blade Runner (1982)... ✓ Found
+  [196/250] How to Train Your Dragon (2010)... ✓ Found
+  [197/250] Spider-Man: No Way Home (2021)... ✓ Found
+  [198/250] Gone Girl (2014)... ✓ Found
+  [199/250] Monsters, Inc. (2001)... ✓ Found
+  [200/250] Jaws (1975)... ✓ Found
+  [201/250] In the Name of the Father (1994)... ✓ Found
+  [202/250] Ford v Ferrari (2019)... ✓ Found
+  [203/250] Relatos salvajes (2014)... ✓ Found
+  [204/250] The Gold Rush (1925)... ✓ Found
+  [205/250] Mary and Max. (2009)... ✓ Found
+  [206/250] Sherlock Jr. (1924)... ✓ Found
+  [207/250] The Deer Hunter (1979)... ✓ Found
+  [208/250] Le salaire de la peur (1955)... ✓ Found
+  [209/250] The General (1927)... ✓ Found
+  [210/250] Logan (2017)... ✓ Found
+  [211/250] Rocky (1976)... ✓ Found
+  [212/250] Mr. Smith Goes to Washington (1939)... ✓ Found
+  [213/250] On the Waterfront (1954)... ✓ Found
+  [214/250] Tôkyô monogatari (1972)... ✓ Found
+  [215/250] Pirates of the Caribbean: The Curse of the Black Pearl (2003)... ✓ Found
+  [216/250] Smultronstället (1959)... ✓ Found
+  [217/250] Spotlight (2015)... ✓ Found
+  [218/250] La haine (1996)... ✓ Found
+  [219/250] Koe no katachi (2016)... ✓ Found
+  [220/250] The Terminator (1984)... ✓ Found
+  [221/250] The Third Man (1950)... ✓ Found
+  [222/250] Maharaja (2024)... ✓ Found
+  [223/250] The Sound of Music (1965)... ✓ Found
+  [224/250] Jai Bhim (2021)... ✓ Found
+  [225/250] The Big Lebowski (1998)... ✓ Found
+  [226/250] The Best Years of Our Lives (1947)... ✓ Found
+  [227/250] Det sjunde inseglet (1958)... ✓ Found
+  [228/250] Room (2016)... ✓ Found
+  [229/250] Before Sunset (2004)... ✓ Found
+  [230/250] Hotel Rwanda (2005)... ✓ Found
+  [231/250] Platoon (1986)... ✓ Found
+  [232/250] The Incredibles (2004)... ✓ Found
+  [233/250] Gekijô-ban Chensô Man Reze-hen (2025)... ✓ Found
+  [234/250] Hachi: A Dog&apos;s Tale (2010)... ✓ Found
+  [235/250] The Exorcist (1973)... ✓ Found
+  [236/250] Rush (2013)... ✓ Found
+  [237/250] The Wizard of Oz (1939)... ✓ Found
+  [238/250] Stand by Me (1986)... ✓ Found
+  [239/250] The Iron Giant (1999)... ✓ Found
+  [240/250] La passion de Jeanne d&apos;Arc (1928)... ✓ Found
+  [241/250] Babam ve Oglum (2005)... ✓ Found
+  [242/250] La battaglia di Algeri (1967)... ✓ Found
+  [243/250] Ah-ga-ssi (2017)... ✓ Found
+  [244/250] Network (1976)... ✓ Found
+  [245/250] To Be or Not to Be (1942)... ✓ Found
+  [246/250] Gangs of Wasseypur (2012)... ✓ Found
+  [247/250] Drishyam (2015)... ✓ Found
+  [248/250] The Grapes of Wrath (1940)... ✓ Found
+  [249/250] The Help (2011)... ✓ Found
+  [250/250] Drishyam (2013)... ✓ Found
+
+Found 244 screenplays on IMSDb
+Saved movie list to screenplays/movie_list.json
+
+[3/4] Downloading and converting screenplays...
+  [1/244] The Shawshank Redemption... ✓ Saved to screenplays/The Shawshank Redemption (1994).fountain
+  [2/244] The Godfather... ✓ Saved to screenplays/The Godfather (1972).fountain
+  [3/244] The Godfather Part II... ✓ Saved to screenplays/The Godfather Part II (1974).fountain
+  [4/244] 12 Angry Men... ✓ Saved to screenplays/12 Angry Men (1957).fountain
+  [5/244] The Lord of the Rings: The Return of the King... ✓ Saved to screenplays/The Lord of the Rings- The Return of the King (2003).fountain
+  [6/244] Schindler&apos;s List... ✓ Saved to screenplays/Schindler&apos;s List (1994).fountain
+  [7/244] The Lord of the Rings: The Fellowship of the Ring... ✓ Saved to screenplays/The Lord of the Rings- The Fellowship of the Ring (2001).fountain
+  [8/244] Pulp Fiction... ✓ Saved to screenplays/Pulp Fiction (1994).fountain
+  [9/244] Il buono, il brutto, il cattivo... ✓ Saved to screenplays/Il buono, il brutto, il cattivo (1967).fountain
+  [10/244] The Lord of the Rings: The Two Towers... ✓ Saved to screenplays/The Lord of the Rings- The Two Towers (2002).fountain
+  [11/244] Forrest Gump... ✓ Saved to screenplays/Forrest Gump (1994).fountain
+  [12/244] Fight Club... ✓ Saved to screenplays/Fight Club (1999).fountain
+  [13/244] Inception... ✓ Saved to screenplays/Inception (2010).fountain
+  [14/244] Star Wars: Episode V - The Empire Strikes Back... ✓ Saved to screenplays/Star Wars- Episode V - The Empire Strikes Back (1980).fountain
+  [15/244] The Matrix... ✓ Saved to screenplays/The Matrix (1999).fountain
+  [16/244] Interstellar... ✓ Saved to screenplays/Interstellar (2014).fountain
+  [17/244] One Flew Over the Cuckoo&apos;s Nest... ✓ Saved to screenplays/One Flew Over the Cuckoo&apos;s Nest (1975).fountain
+  [18/244] Se7en... ✓ Saved to screenplays/Se7en (1995).fountain
+  [19/244] It&apos;s a Wonderful Life... ✓ Saved to screenplays/It&apos;s a Wonderful Life (1947).fountain
+  [20/244] The Silence of the Lambs... ✓ Saved to screenplays/The Silence of the Lambs (1991).fountain
+  [21/244] Shichinin no samurai... ✓ Saved to screenplays/Shichinin no samurai (1956).fountain
+  [22/244] Saving Private Ryan... ✓ Saved to screenplays/Saving Private Ryan (1998).fountain
+  [23/244] The Green Mile... ✓ Saved to screenplays/The Green Mile (1999).fountain
+  [24/244] Cidade de Deus... ✓ Saved to screenplays/Cidade de Deus (2004).fountain
+  [25/244] La vita è bella... ✓ Saved to screenplays/La vita è bella (1997).fountain
+  [26/244] Terminator 2: Judgment Day... ✓ Saved to screenplays/Terminator 2- Judgment Day (1991).fountain
+  [27/244] Star Wars... ✓ Saved to screenplays/Star Wars (1977).fountain
+  [28/244] Back to the Future... ✓ Saved to screenplays/Back to the Future (1985).fountain
+  [29/244] Sen to Chihiro no kamikakushi... ✓ Saved to screenplays/Sen to Chihiro no kamikakushi (2003).fountain
+  [30/244] The Pianist... ✓ Saved to screenplays/The Pianist (2003).fountain
+  [31/244] Gladiator... ✓ Saved to screenplays/Gladiator (2000).fountain
+  [32/244] Gisaengchung... ✓ Saved to screenplays/Gisaengchung (2019).fountain
+  [33/244] Hotaru no haka... ✓ Saved to screenplays/Hotaru no haka (1989).fountain
+  [34/244] Psycho... ✓ Saved to screenplays/Psycho (1960).fountain
+  [35/244] The Lion King... ✓ Saved to screenplays/The Lion King (1994).fountain
+  [36/244] Seppuku... ✓ Saved to screenplays/Seppuku (1964).fountain
+  [37/244] The Departed... ✓ Saved to screenplays/The Departed (2006).fountain
+  [38/244] Whiplash... ✓ Saved to screenplays/Whiplash (2014).fountain
+  [39/244] The Prestige... ✓ Saved to screenplays/The Prestige (2006).fountain
+  [40/244] American History X... ✓ Saved to screenplays/American History X (1998).fountain
+  [41/244] Léon... ✓ Saved to screenplays/Léon (1994).fountain
+  [42/244] Spider-Man: Across the Spider-Verse... ✓ Saved to screenplays/Spider-Man- Across the Spider-Verse (2023).fountain
+  [43/244] Nuovo Cinema Paradiso... ✓ Saved to screenplays/Nuovo Cinema Paradiso (1990).fountain
+  [44/244] Intouchables... ✓ Saved to screenplays/Intouchables (2011).fountain
+  [45/244] The Usual Suspects... ✓ Saved to screenplays/The Usual Suspects (1995).fountain
+  [46/244] Alien... ✓ Saved to screenplays/Alien (1979).fountain
+  [47/244] Django Unchained... ✓ Saved to screenplays/Django Unchained (2012).fountain
+  [48/244] Modern Times... ✓ Saved to screenplays/Modern Times (1936).fountain
+  [49/244] Rear Window... ✓ Saved to screenplays/Rear Window (1954).fountain
+  [50/244] C&apos;era una volta il West... ✓ Saved to screenplays/C&apos;era una volta il West (1969).fountain
+  [51/244] City Lights... ✓ Saved to screenplays/City Lights (1931).fountain
+  [52/244] Apocalypse Now... ✓ Saved to screenplays/Apocalypse Now (1979).fountain
+  [53/244] WALL·E... ✓ Saved to screenplays/WALL·E (2008).fountain
+  [54/244] Memento... ✓ Saved to screenplays/Memento (2001).fountain
+  [55/244] Dune: Part Two... ✓ Saved to screenplays/Dune- Part Two (2024).fountain
+  [56/244] Raiders of the Lost Ark... ✓ Saved to screenplays/Raiders of the Lost Ark (1981).fountain
+  [57/244] Avengers: Infinity War... ✓ Saved to screenplays/Avengers- Infinity War (2018).fountain
+  [58/244] Das Leben der Anderen... ✓ Saved to screenplays/Das Leben der Anderen (2007).fountain
+  [59/244] Spider-Man: Into the Spider-Verse... ✓ Saved to screenplays/Spider-Man- Into the Spider-Verse (2018).fountain
+  [60/244] Sunset Blvd.... ✓ Saved to screenplays/Sunset Blvd. (1950).fountain
+  [61/244] Witness for the Prosecution... ✓ Saved to screenplays/Witness for the Prosecution (1958).fountain
+  [62/244] Paths of Glory... ✓ Saved to screenplays/Paths of Glory (1957).fountain
+  [63/244] The Shining... ✓ Saved to screenplays/The Shining (1980).fountain
+  [64/244] The Great Dictator... ✓ Saved to screenplays/The Great Dictator (1941).fountain
+  [65/244] Inglourious Basterds... ✓ Saved to screenplays/Inglourious Basterds (2009).fountain
+  [66/244] 12th Fail... ✓ Saved to screenplays/12th Fail (2023).fountain
+  [67/244] Aliens... ✓ Saved to screenplays/Aliens (1986).fountain
+  [68/244] Tengoku to jigoku... ✓ Saved to screenplays/Tengoku to jigoku (1963).fountain
+  [69/244] The Dark Knight Rises... ✓ Saved to screenplays/The Dark Knight Rises (2012).fountain
+  [70/244] Avengers: Endgame... ✓ Saved to screenplays/Avengers- Endgame (2019).fountain
+  [71/244] Good Will Hunting... ✓ Saved to screenplays/Good Will Hunting (1998).fountain
+  [72/244] Coco... ✓ Saved to screenplays/Coco (2017).fountain
+  [73/244] Amadeus... ✓ Saved to screenplays/Amadeus (1984).fountain
+  [74/244] Toy Story... ✓ Saved to screenplays/Toy Story (1995).fountain
+  [75/244] Kimi no na wa.... ✓ Saved to screenplays/Kimi no na wa. (2017).fountain
+  [76/244] Das Boot... ✓ Saved to screenplays/Das Boot (1982).fountain
+  [77/244] Oldeuboi... ✓ Saved to screenplays/Oldeuboi (2003).fountain
+  [78/244] Braveheart... ✓ Saved to screenplays/Braveheart (1995).fountain
+  [79/244] Mononoke-hime... ✓ Saved to screenplays/Mononoke-hime (1997).fountain
+  [80/244] Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb... ✓ Saved to screenplays/Dr. Strangelove or- How I Learned to Stop Worrying and Love the Bomb (1964).fountain
+  [81/244] 3 Idiots... ✓ Saved to screenplays/3 Idiots (2009).fountain
+  [82/244] American Beauty... ✓ Saved to screenplays/American Beauty (1999).fountain
+  [83/244] Capharnaüm... ✓ Saved to screenplays/Capharnaüm (2018).fountain
+  [84/244] Singin&apos; in the Rain... ✓ Saved to screenplays/Singin&apos; in the Rain (1952).fountain
+  [85/244] Joker... ✓ Saved to screenplays/Joker (2019).fountain
+  [86/244] C&apos;era una volta in America... ✓ Saved to screenplays/C&apos;era una volta in America (1984).fountain
+  [87/244] Idi i smotri... ✓ Saved to screenplays/Idi i smotri (1985).fountain
+  [88/244] Star Wars: Episode VI - Return of the Jedi... ✓ Saved to screenplays/Star Wars- Episode VI - Return of the Jedi (1983).fountain
+  [89/244] Requiem for a Dream... ✓ Saved to screenplays/Requiem for a Dream (2000).fountain
+  [90/244] Toy Story 3... ✓ Saved to screenplays/Toy Story 3 (2010).fountain
+  [91/244] Ikiru... ✓ Saved to screenplays/Ikiru (1956).fountain
+  [92/244] Jagten... ✓ Saved to screenplays/Jagten (2012).fountain
+  [93/244] Incendies... ✓ Saved to screenplays/Incendies (2011).fountain
+  [94/244] Eternal Sunshine of the Spotless Mind... ✓ Saved to screenplays/Eternal Sunshine of the Spotless Mind (2004).fountain
+  [95/244] The Apartment... ✓ Saved to screenplays/The Apartment (1960).fountain
+  [96/244] Lawrence of Arabia... ✓ Saved to screenplays/Lawrence of Arabia (1962).fountain
+  [97/244] 2001: A Space Odyssey... ✓ Saved to screenplays/2001- A Space Odyssey (1968).fountain
+  [98/244] Reservoir Dogs... ✓ Saved to screenplays/Reservoir Dogs (1992).fountain
+  [99/244] Heat... ✓ Saved to screenplays/Heat (1995).fountain
+  [100/244] Scarface... ✓ Saved to screenplays/Scarface (1983).fountain
+  [101/244] Double Indemnity... ✓ Saved to screenplays/Double Indemnity (1944).fountain
+  [102/244] Up... ✓ Saved to screenplays/Up (2009).fountain
+  [103/244] North by Northwest... ✓ Saved to screenplays/North by Northwest (1959).fountain
+  [104/244] Taare Zameen Par... ✓ Saved to screenplays/Taare Zameen Par (2007).fountain
+  [105/244] M - Eine Stadt sucht einen Mörder... ✓ Saved to screenplays/M - Eine Stadt sucht einen Mörder (1931).fountain
+  [106/244] Citizen Kane... ✓ Saved to screenplays/Citizen Kane (1941).fountain
+  [107/244] Le fabuleux destin d&apos;Amélie Poulain... ✓ Saved to screenplays/Le fabuleux destin d&apos;Amélie Poulain (2002).fountain
+  [108/244] Vertigo... ✓ Saved to screenplays/Vertigo (1958).fountain
+  [109/244] Jodaeiye Nader az Simin... ✓ Saved to screenplays/Jodaeiye Nader az Simin (2011).fountain
+  [110/244] Die Hard... ✓ Saved to screenplays/Die Hard (1988).fountain
+  [111/244] To Kill a Mockingbird... ✓ Saved to screenplays/To Kill a Mockingbird (1963).fountain
+  [112/244] The Sting... ✓ Saved to screenplays/The Sting (1973).fountain
+  [113/244] Indiana Jones and the Last Crusade... ✓ Saved to screenplays/Indiana Jones and the Last Crusade (1989).fountain
+  [114/244] A Clockwork Orange... ✓ Saved to screenplays/A Clockwork Orange (1972).fountain
+  [115/244] Metropolis... ✓ Saved to screenplays/Metropolis (1927).fountain
+  [116/244] 1917... ✓ Saved to screenplays/1917 (2020).fountain
+  [117/244] Snatch... ✓ Saved to screenplays/Snatch (2001).fountain
+  [118/244] L.A. Confidential... ✓ Saved to screenplays/L.A. Confidential (1997).fountain
+  [119/244] Der Untergang... ✓ Saved to screenplays/Der Untergang (2005).fountain
+  [120/244] The Wolf of Wall Street... ✓ Saved to screenplays/The Wolf of Wall Street (2013).fountain
+  [121/244] Dangal... ✓ Saved to screenplays/Dangal (2016).fountain
+  [122/244] Ladri di biciclette... ✓ Saved to screenplays/Ladri di biciclette (1949).fountain
+  [123/244] The Truman Show... ✓ Saved to screenplays/The Truman Show (1998).fountain
+  [124/244] Oppenheimer... ✓ Saved to screenplays/Oppenheimer (2023).fountain
+  [125/244] Green Book... ✓ Saved to screenplays/Green Book (2018).fountain
+  [126/244] Shutter Island... ✓ Saved to screenplays/Shutter Island (2010).fountain
+  [127/244] Judgment at Nuremberg... ✓ Saved to screenplays/Judgment at Nuremberg (1961).fountain
+  [128/244] Hamilton... ✓ Saved to screenplays/Hamilton (2020).fountain
+  [129/244] Per qualche dollaro in più... ✓ Saved to screenplays/Per qualche dollaro in più (1967).fountain
+  [130/244] Taxi Driver... ✓ Saved to screenplays/Taxi Driver (1976).fountain
+  [131/244] Jurassic Park... ✓ Saved to screenplays/Jurassic Park (1993).fountain
+  [132/244] Some Like It Hot... ✓ Saved to screenplays/Some Like It Hot (1959).fountain
+  [133/244] There Will Be Blood... ✓ Saved to screenplays/There Will Be Blood (2008).fountain
+  [134/244] The Kid... ✓ Saved to screenplays/The Kid (1921).fountain
+  [135/244] The Father... ✓ Saved to screenplays/The Father (2021).fountain
+  [136/244] All About Eve... ✓ Saved to screenplays/All About Eve (1950).fountain
+  [137/244] The Sixth Sense... ✓ Saved to screenplays/The Sixth Sense (1999).fountain
+  [138/244] Ran... ✓ Saved to screenplays/Ran (1985).fountain
+  [139/244] Casino... ✓ Saved to screenplays/Casino (1995).fountain
+  [140/244] No Country for Old Men... ✓ Saved to screenplays/No Country for Old Men (2007).fountain
+  [141/244] The Thing... ✓ Saved to screenplays/The Thing (1982).fountain
+  [142/244] Top Gun: Maverick... ✓ Saved to screenplays/Top Gun- Maverick (2022).fountain
+  [143/244] Prisoners... ✓ Saved to screenplays/Prisoners (2013).fountain
+  [144/244] Kill Bill: Vol. 1... ✓ Saved to screenplays/Kill Bill- Vol. 1 (2003).fountain
+  [145/244] El laberinto del fauno... ✓ Saved to screenplays/El laberinto del fauno (2007).fountain
+  [146/244] A Beautiful Mind... ✓ Saved to screenplays/A Beautiful Mind (2002).fountain
+  [147/244] The Treasure of the Sierra Madre... ✓ Saved to screenplays/The Treasure of the Sierra Madre (1948).fountain
+  [148/244] Hauru no ugoku shiro... ✓ Saved to screenplays/Hauru no ugoku shiro (2005).fountain
+  [149/244] Finding Nemo... ✓ Saved to screenplays/Finding Nemo (2003).fountain
+  [150/244] Yôjinbô... ✓ Saved to screenplays/Yôjinbô (1961).fountain
+  [151/244] Klaus... ✓ Saved to screenplays/Klaus (2019).fountain
+  [152/244] The Great Escape... ✓ Saved to screenplays/The Great Escape (1963).fountain
+  [153/244] The Elephant Man... ✓ Saved to screenplays/The Elephant Man (1980).fountain
+  [154/244] Monty Python and the Holy Grail... ✓ Saved to screenplays/Monty Python and the Holy Grail (1975).fountain
+  [155/244] La meglio gioventù... ✓ Saved to screenplays/La meglio gioventù (2003).fountain
+  [156/244] Dial M for Murder... ✓ Saved to screenplays/Dial M for Murder (1954).fountain
+  [157/244] Gekijô-ban Kimetsu no Yaiba Mugen Jô-hen... ✓ Saved to screenplays/Gekijô-ban Kimetsu no Yaiba Mugen Jô-hen (2025).fountain
+  [158/244] Gone with the Wind... ✓ Saved to screenplays/Gone with the Wind (1940).fountain
+  [159/244] El secreto de sus ojos... ✓ Saved to screenplays/El secreto de sus ojos (2010).fountain
+  [160/244] Chinatown... ✓ Saved to screenplays/Chinatown (1974).fountain
+  [161/244] Lock, Stock and Two Smoking Barrels... ✓ Saved to screenplays/Lock, Stock and Two Smoking Barrels (1998).fountain
+  [162/244] V for Vendetta... ✓ Saved to screenplays/V for Vendetta (2006).fountain
+  [163/244] Catch Me If You Can... ✓ Saved to screenplays/Catch Me If You Can (2002).fountain
+  [164/244] Inside Out... ✓ Saved to screenplays/Inside Out (2015).fountain
+  [165/244] Rashômon... ✓ Saved to screenplays/Rashômon (1951).fountain
+  [166/244] Hababam Sinifi: Sinifta Kaldi... ✓ Saved to screenplays/Hababam Sinifi- Sinifta Kaldi (1975).fountain
+  [167/244] Three Billboards Outside Ebbing, Missouri... ✓ Saved to screenplays/Three Billboards Outside Ebbing, Missouri (2017).fountain
+  [168/244] Trainspotting... ✓ Saved to screenplays/Trainspotting (1996).fountain
+  [169/244] The Bridge on the River Kwai... ✓ Saved to screenplays/The Bridge on the River Kwai (1957).fountain
+  [170/244] Harry Potter and the Deathly Hallows: Part 2... ✓ Saved to screenplays/Harry Potter and the Deathly Hallows- Part 2 (2011).fountain
+  [171/244] Dead Poets Society... ✓ Saved to screenplays/Dead Poets Society (1989).fountain
+  [172/244] The Wild Robot... ✓ Saved to screenplays/The Wild Robot (2024).fountain
+  [173/244] Warrior... ✓ Saved to screenplays/Warrior (2011).fountain
+  [174/244] Fargo... ✓ Saved to screenplays/Fargo (1996).fountain
+  [175/244] Barry Lyndon... ✓ Saved to screenplays/Barry Lyndon (1975).fountain
+  [176/244] Raging Bull... ✓ Saved to screenplays/Raging Bull (1980).fountain
+  [177/244] Ben-Hur... ✓ Saved to screenplays/Ben-Hur (1959).fountain
+  [178/244] Million Dollar Baby... ✓ Saved to screenplays/Million Dollar Baby (2005).fountain
+  [179/244] Mad Max: Fury Road... ✓ Saved to screenplays/Mad Max- Fury Road (2015).fountain
+  [180/244] Bacheha-ye aseman... ✓ Saved to screenplays/Bacheha-ye aseman (1999).fountain
+  [181/244] Hacksaw Ridge... ✓ Saved to screenplays/Hacksaw Ridge (2016).fountain
+  [182/244] Gran Torino... ✓ Saved to screenplays/Gran Torino (2009).fountain
+  [183/244] Tonari no Totoro... ✓ Saved to screenplays/Tonari no Totoro (1990).fountain
+  [184/244] 12 Years a Slave... ✓ Saved to screenplays/12 Years a Slave (2013).fountain
+  [185/244] The Grand Budapest Hotel... ✓ Saved to screenplays/The Grand Budapest Hotel (2014).fountain
+  [186/244] Ratatouille... ✓ Saved to screenplays/Ratatouille (2007).fountain
+  [187/244] Before Sunrise... ✓ Saved to screenplays/Before Sunrise (1995).fountain
+  [188/244] Salinui chueok... ✓ Saved to screenplays/Salinui chueok (2003).fountain
+  [189/244] Blade Runner... ✓ Saved to screenplays/Blade Runner (1982).fountain
+  [190/244] How to Train Your Dragon... ✓ Saved to screenplays/How to Train Your Dragon (2010).fountain
+  [191/244] Spider-Man: No Way Home... ✓ Saved to screenplays/Spider-Man- No Way Home (2021).fountain
+  [192/244] Gone Girl... ✓ Saved to screenplays/Gone Girl (2014).fountain
+  [193/244] Monsters, Inc.... ✓ Saved to screenplays/Monsters, Inc. (2001).fountain
+  [194/244] Jaws... ✓ Saved to screenplays/Jaws (1975).fountain
+  [195/244] In the Name of the Father... ✓ Saved to screenplays/In the Name of the Father (1994).fountain
+  [196/244] Ford v Ferrari... ✓ Saved to screenplays/Ford v Ferrari (2019).fountain
+  [197/244] Relatos salvajes... ✓ Saved to screenplays/Relatos salvajes (2014).fountain
+  [198/244] The Gold Rush... ✓ Saved to screenplays/The Gold Rush (1925).fountain
+  [199/244] Mary and Max.... ✓ Saved to screenplays/Mary and Max. (2009).fountain
+  [200/244] Sherlock Jr.... ✓ Saved to screenplays/Sherlock Jr. (1924).fountain
+  [201/244] The Deer Hunter... ✓ Saved to screenplays/The Deer Hunter (1979).fountain
+  [202/244] Le salaire de la peur... ✓ Saved to screenplays/Le salaire de la peur (1955).fountain
+  [203/244] The General... ✓ Saved to screenplays/The General (1927).fountain
+  [204/244] Logan... ✓ Saved to screenplays/Logan (2017).fountain
+  [205/244] Rocky... ✓ Saved to screenplays/Rocky (1976).fountain
+  [206/244] Mr. Smith Goes to Washington... ✓ Saved to screenplays/Mr. Smith Goes to Washington (1939).fountain
+  [207/244] On the Waterfront... ✓ Saved to screenplays/On the Waterfront (1954).fountain
+  [208/244] Tôkyô monogatari... ✓ Saved to screenplays/Tôkyô monogatari (1972).fountain
+  [209/244] Pirates of the Caribbean: The Curse of the Black Pearl... ✓ Saved to screenplays/Pirates of the Caribbean- The Curse of the Black Pearl (2003).fountain
+  [210/244] Smultronstället... ✓ Saved to screenplays/Smultronstället (1959).fountain
+  [211/244] Spotlight... ✓ Saved to screenplays/Spotlight (2015).fountain
+  [212/244] La haine... ✓ Saved to screenplays/La haine (1996).fountain
+  [213/244] Koe no katachi... ✓ Saved to screenplays/Koe no katachi (2016).fountain
+  [214/244] The Terminator... ✓ Saved to screenplays/The Terminator (1984).fountain
+  [215/244] The Third Man... ✓ Saved to screenplays/The Third Man (1950).fountain
+  [216/244] Maharaja... ✓ Saved to screenplays/Maharaja (2024).fountain
+  [217/244] The Sound of Music... ✓ Saved to screenplays/The Sound of Music (1965).fountain
+  [218/244] Jai Bhim... ✓ Saved to screenplays/Jai Bhim (2021).fountain
+  [219/244] The Big Lebowski... ✓ Saved to screenplays/The Big Lebowski (1998).fountain
+  [220/244] The Best Years of Our Lives... ✓ Saved to screenplays/The Best Years of Our Lives (1947).fountain
+  [221/244] Det sjunde inseglet... ✓ Saved to screenplays/Det sjunde inseglet (1958).fountain
+  [222/244] Room... ✓ Saved to screenplays/Room (2016).fountain
+  [223/244] Before Sunset... ✓ Saved to screenplays/Before Sunset (2004).fountain
+  [224/244] Hotel Rwanda... ✓ Saved to screenplays/Hotel Rwanda (2005).fountain
+  [225/244] Platoon... ✓ Saved to screenplays/Platoon (1986).fountain
+  [226/244] The Incredibles... ✓ Saved to screenplays/The Incredibles (2004).fountain
+  [227/244] Gekijô-ban Chensô Man Reze-hen... ✓ Saved to screenplays/Gekijô-ban Chensô Man Reze-hen (2025).fountain
+  [228/244] Hachi: A Dog&apos;s Tale... ✓ Saved to screenplays/Hachi- A Dog&apos;s Tale (2010).fountain
+  [229/244] The Exorcist... ✓ Saved to screenplays/The Exorcist (1973).fountain
+  [230/244] Rush... ✓ Saved to screenplays/Rush (2013).fountain
+  [231/244] The Wizard of Oz... ✓ Saved to screenplays/The Wizard of Oz (1939).fountain
+  [232/244] Stand by Me... ✓ Saved to screenplays/Stand by Me (1986).fountain
+  [233/244] The Iron Giant... ✓ Saved to screenplays/The Iron Giant (1999).fountain
+  [234/244] La passion de Jeanne d&apos;Arc... ✓ Saved to screenplays/La passion de Jeanne d&apos;Arc (1928).fountain
+  [235/244] Babam ve Oglum... ✓ Saved to screenplays/Babam ve Oglum (2005).fountain
+  [236/244] La battaglia di Algeri... ✓ Saved to screenplays/La battaglia di Algeri (1967).fountain
+  [237/244] Ah-ga-ssi... ✓ Saved to screenplays/Ah-ga-ssi (2017).fountain
+  [238/244] Network... ✓ Saved to screenplays/Network (1976).fountain
+  [239/244] To Be or Not to Be... ✓ Saved to screenplays/To Be or Not to Be (1942).fountain
+  [240/244] Gangs of Wasseypur... ✓ Saved to screenplays/Gangs of Wasseypur (2012).fountain
+  [241/244] Drishyam... ✓ Saved to screenplays/Drishyam (2015).fountain
+  [242/244] The Grapes of Wrath... ✓ Saved to screenplays/The Grapes of Wrath (1940).fountain
+  [243/244] The Help... ✓ Saved to screenplays/The Help (2011).fountain
+  [244/244] Drishyam... ✓ Saved to screenplays/Drishyam (2013).fountain
+
+[4/4] Summary
+  Total movies with screenplays: 244
+  Successfully converted: 244
+  Failed: 0
+
+Screenplays saved to: screenplays/
+============================================================
