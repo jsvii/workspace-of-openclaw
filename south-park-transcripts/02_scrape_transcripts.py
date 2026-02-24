@@ -91,7 +91,7 @@ class TranscriptScraper:
                 failed += 1
                 continue
             
-            # Skip if already has transcript_url and transcript file exists
+            # Check if already downloaded
             if transcript_url:
                 safe_title = ep['title'].replace(' ', '_')
                 safe_title = ''.join(c for c in safe_title if c.isalnum() or c in '_-')
@@ -102,38 +102,38 @@ class TranscriptScraper:
                     continue
             
             try:
-                # Download episode page
-                response = requests.get(imsdb_url, timeout=30)
-                if response.status_code != 200:
-                    print(f"✗ Download failed ({response.status_code})")
-                    failed += 1
-                    continue
-                
-                # Get transcript URL using .script-details a[href^="/transcripts"]
-                new_transcript_url = self.get_transcript_url(response.text)
-                
-                if new_transcript_url:
-                    transcript_url = new_transcript_url
-                    ep['transcript_url'] = transcript_url
-                    
-                    # Download transcript page
-                    transcript_response = requests.get(transcript_url, timeout=30)
-                    if transcript_response.status_code == 200:
-                        html_content = transcript_response.text
-                    else:
-                        print(f"✗ Transcript download failed ({transcript_response.status_code})")
+                # If no transcript_url, fetch it
+                if not transcript_url:
+                    transcript_response = requests.get(imsdb_url, timeout=30)
+                    if transcript_response.status_code != 200:
+                        print(f"✗ Download failed ({transcript_response.status_code})")
                         failed += 1
                         continue
-                else:
-                    # Try direct transcript URL
-                    html_content = self.get_transcript_from_page(imsdb_url)
-                    if html_content:
-                        transcript_url = imsdb_url
+                    
+                    new_transcript_url = self.get_transcript_url(transcript_response.text)
+                    
+                    if new_transcript_url:
+                        transcript_url = new_transcript_url
                         ep['transcript_url'] = transcript_url
                     else:
-                        print("✗ No transcript link found")
-                        failed += 1
-                        continue
+                        # Try direct transcript URL
+                        html_content = self.get_transcript_from_page(imsdb_url)
+                        if html_content:
+                            transcript_url = imsdb_url
+                            ep['transcript_url'] = transcript_url
+                        else:
+                            print("✗ No transcript link found")
+                            failed += 1
+                            continue
+                
+                # Download transcript page
+                transcript_response = requests.get(transcript_url, timeout=30)
+                if transcript_response.status_code == 200:
+                    html_content = transcript_response.text
+                else:
+                    print(f"✗ Transcript download failed ({transcript_response.status_code})")
+                    failed += 1
+                    continue
                 
                 # Convert to fountain
                 fountain = convert_html_to_fountain(html_content, title)
@@ -177,16 +177,58 @@ def main():
     
     # Show current status
     done = sum(1 for ep in episodes if ep.get('transcript_url'))
-    print(f"Already have transcripts: {done}")
+    print(f"Episodes with transcript URLs: {done}/{len(episodes)}")
+    
+    have_files = 0
+    for ep in episodes:
+        season = ep['season']
+        episode_num = ep['episode_num']
+        title = ep['title']
+        safe_title = title.replace(' ', '_')
+        safe_title = ''.join(c for c in safe_title if c.isalnum() or c in '_-')
+        filepath = TRANSCRIPTS_DIR / f"S{season:02d}E{episode_num:02d}_{safe_title}.fountain"
+        if filepath.exists():
+            have_files += 1
+    
+    print(f"Transcripts already downloaded: {have_files}")
+    
     to_process = [ep for ep in episodes if not ep.get('transcript_url')]
     print(f"Need to process: {len(to_process)}")
     
-    if not to_process:
+    if not to_process and have_files == len(episodes):
         print("\nAll episodes already have transcripts!")
         return
     
-    # Download and convert
-    print(f"\nDownloading {len(to_process)} transcripts...")
+    if to_process:
+        print(f"\nFetching transcript URLs for {len(to_process)} episodes...")
+        for i, ep in enumerate(to_process):
+            season = ep['season']
+            episode_num = ep['episode_num']
+            title = ep['title']
+            
+            print(f"  [{i+1}/{len(to_process)}] S{season:02d}E{episode_num:02d} - {title}...", end=" ", flush=True)
+            
+            try:
+                response = requests.get(ep['imsdb_url'], timeout=30)
+                if response.status_code == 200:
+                    new_url = scraper.get_transcript_url(response.text)
+                    if new_url:
+                        ep['transcript_url'] = new_url
+                        print(f"✓ Found")
+                    else:
+                        print(f"✗ Not found")
+                else:
+                    print(f"✗ Failed")
+            except Exception as e:
+                print(f"✗ Error: {e}")
+            
+            time.sleep(DELAY_BETWEEN_REQUESTS)
+        
+        # Save updated URLs
+        scraper.save_episodes(episodes)
+    
+    # Download transcripts
+    print(f"\nDownloading transcripts...")
     successful, failed = scraper.download_and_convert(episodes)
     
     # Save updated episode list
