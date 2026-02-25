@@ -60,7 +60,6 @@ class IMSDbScraper:
             soup = BeautifulSoup(response.text, "html.parser")
             
             # Use the same DOM expression: table td[valign="top"][2]
-            print("=========soup")
             tables = soup.find_all('table')
             main_block = None
             
@@ -233,11 +232,9 @@ class IMDbScraper:
         for i, data in enumerate(movies_data):
             imdb_id = data['imdb_id']
             imdb_url = f"https://www.imdb.com/title/{imdb_id}/"
-            
             print(f"  [{i+1}/{len(movies_data)}] Fetching {imdb_id}...", end=" ", flush=True)
-            
             details = self._get_movie_details(imdb_id)
-            title = data.get('title', ''),
+            title = data.get('title')
             if details:
                 movies.append(Movie(
                     title=title,
@@ -255,7 +252,7 @@ class IMDbScraper:
                     imdb_url=imdb_url
                 ))
                 print("failed, using fallback")
-            
+
             time.sleep(0.5)  # Small delay between requests
         
         return movies
