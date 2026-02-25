@@ -237,9 +237,10 @@ class IMDbScraper:
             print(f"  [{i+1}/{len(movies_data)}] Fetching {imdb_id}...", end=" ", flush=True)
             
             details = self._get_movie_details(imdb_id)
+            title = data.get('title', ''),
             if details:
                 movies.append(Movie(
-                    title=details['title'],
+                    title=title,
                     year=details['year'],
                     imdb_id=imdb_id,
                     imdb_url=imdb_url
@@ -248,7 +249,7 @@ class IMDbScraper:
             else:
                 # Use fallback
                 movies.append(Movie(
-                    title=data.get('title', 'Unknown'),
+                    title=title,
                     year=data.get('year', 0),
                     imdb_id=imdb_id,
                     imdb_url=imdb_url
