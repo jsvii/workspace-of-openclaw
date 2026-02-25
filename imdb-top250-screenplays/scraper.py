@@ -60,13 +60,14 @@ class IMSDbScraper:
             soup = BeautifulSoup(response.text, "html.parser")
             
             # Use the same DOM expression: table td[valign="top"][2]
+            print("=========soup")
             tables = soup.find_all('table')
             main_block = None
             
             for table in tables:
                 tds = table.find_all('td', attrs={'valign': 'top'})
-                if len(tds) >= 3:
-                    main_block = tds[2]
+                if len(tds) >= 2:
+                    main_block = tds[1]
                     break
             
             if not main_block:
@@ -86,7 +87,8 @@ class IMSDbScraper:
             
             if not movie_links:
                 return None
-            
+
+            print(movie_links)
             # Score the links to find best match
             title_lower = movie_title.lower().strip()
             title_clean = title_lower.replace('the ', '').strip()
@@ -223,7 +225,7 @@ class IMDbScraper:
         if not movies_data:
             print("JSON-LD failed, trying HTML parsing...")
             movies_data = self._get_movies_from_html()
-        
+
         print(f"Found {len(movies_data)} movies, fetching details...")
 
         # Now fetch details (year, english title) for each movie
