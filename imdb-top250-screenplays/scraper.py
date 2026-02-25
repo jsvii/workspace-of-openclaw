@@ -113,12 +113,12 @@ class IMSDbScraper:
                 if score > best_score:
                     best_score = score
                     best_match = href
-            
+
             if best_match and best_score >= 60:
                 # Visit the intro page to get transcript URL
                 intro_url = IMSDB_BASE_URL + best_match if best_match.startswith('/') else best_match
                 transcript_url = self._get_transcript_from_intro_page(intro_url, movie_title)
-                
+
                 if transcript_url:
                     return transcript_url
             
@@ -137,11 +137,11 @@ class IMSDbScraper:
             
             soup = BeautifulSoup(response.text, "html.parser")
             
-            # Use .script-details a[href^="/transcripts"] to find transcript link
+            # Use .script-details a[href^="/scripts"] to find transcript link
             script_details = soup.select('.script-details')
             
             if script_details:
-                links = script_details[0].select('a[href^="/transcripts"]')
+                links = script_details[0].select('a[href^="/scripts"]')
                 if links:
                     href = links[0].get('href', '')
                     if href:
