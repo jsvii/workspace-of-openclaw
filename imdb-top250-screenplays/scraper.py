@@ -245,7 +245,7 @@ class IMDbScraper:
                     imdb_id=imdb_id,
                     imdb_url=imdb_url
                 ))
-                print(f"{details['title']} ({details['year']})")
+                print(f"{title} ({details['year']})")
             else:
                 # Use fallback
                 movies.append(Movie(
