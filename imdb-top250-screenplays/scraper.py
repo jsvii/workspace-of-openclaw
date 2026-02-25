@@ -233,7 +233,7 @@ class IMDbScraper:
             imdb_id = data['imdb_id']
             imdb_url = f"https://www.imdb.com/title/{imdb_id}/"
             print(f"  [{i+1}/{len(movies_data)}] Fetching {imdb_id}...", end=" ", flush=True)
-            details = None # self._get_movie_details(imdb_id)
+            details = self._get_movie_details(imdb_id)
             title = data.get('title')
             if details:
                 movies.append(Movie(
@@ -253,7 +253,7 @@ class IMDbScraper:
                 ))
                 print("failed, using fallback")
 
-            # time.sleep(0.5)  # Small delay between requests
+            time.sleep(0.5)  # Small delay between requests
         
         return movies
     
