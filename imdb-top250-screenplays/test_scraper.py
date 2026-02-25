@@ -27,12 +27,12 @@ def test_get_script_url_by_title(test_data):
 def test():
     test_datas = [{
         "title": "The Shawshank Redemption",
-        "year": 1994,
+        "year": "",
         "imdb_id": "tt0111161",
         "imdb_url": "https://www.imdb.com/title/tt0111161"
     }, {
         "title": "Schindler's List",
-        "year": 1993,
+        "year": "",
         "imdb_id": "tt0108052",
         "imdb_url": "https://www.imdb.com/title/tt0108052"
     }]
