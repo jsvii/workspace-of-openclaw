@@ -17,17 +17,17 @@ import requests
 from bs4 import BeautifulSoup
 
 # Default Configuration
-DEFAULT_SOUTH_PARK_URL = "https://imsdb.com/TV/South%20Park.html"
+DEFAULT_ENTRY_URL = "https://imsdb.com/TV/South%20Park.html"
 BASE_URL = "https://imsdb.com"
 OUTPUT_FILE = Path(__file__).parent / "transcripts" / "episode_list.json"
 DELAY_BETWEEN_REQUESTS = 1.0
 
 
-def get_episode_list(south_park_url: str) -> list:
+def get_episode_list(entry_url: str) -> list:
     """Get list of all South Park episodes with correct season numbers."""
-    print(f"Fetching episode list from {south_park_url}...")
+    print(f"Fetching episode list from {entry_url}...")
     
-    response = requests.get(south_park_url, timeout=30)
+    response = requests.get(entry_url, timeout=30)
     response.raise_for_status()
     
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -49,7 +49,7 @@ def get_episode_list(south_park_url: str) -> list:
     for link in soup.find_all('a', href=True):
         href = link.get('href', '')
         text = link.get_text(strip=True)
-        if '/TV Transcripts/South Park' in href and href.endswith('.html'):
+        if '/TV Transcripts/' in href and href.endswith('.html'):
             all_links.append({
                 'href': href,
                 'text': text,
@@ -108,7 +108,7 @@ def get_episode_list(south_park_url: str) -> list:
                         href = link.get('href', '')
                         link_text = link.get_text(strip=True)
                         
-                        if '/TV Transcripts/South Park' in href and href.endswith('.html'):
+                        if '/TV Transcripts/' in href and href.endswith('.html'):
                             episode_in_season += 1
                             title = link_text.replace(' Script', '').strip()
                             
@@ -149,7 +149,7 @@ def get_episode_list(south_park_url: str) -> list:
                         href = link.get('href', '')
                         link_text = link.get_text(strip=True)
                         
-                        if '/TV Transcripts/South Park' in href and href.endswith('.html'):
+                        if '/TV Transcripts/' in href and href.endswith('.html'):
                             # Get current episode number for this season
                             existing_count = sum(1 for ep in episodes if ep['season'] == current_season)
                             
@@ -197,23 +197,23 @@ def main():
     parser.add_argument(
         "--url", 
         type=str, 
-        default=DEFAULT_SOUTH_PARK_URL,
+        default=DEFAULT_ENTRY_URL,
         help="URL of the TV transcript page"
     )
     args = parser.parse_args()
     
-    south_park_url = args.url
+    entry_url = args.url
     
     print("=" * 60)
     print("South Park Episode List Generator")
     print("=" * 60)
-    print(f"Using URL: {south_park_url}")
+    print(f"Using URL: {entry_url}")
     
     # Ensure output directory exists
     OUTPUT_FILE.parent.mkdir(exist_ok=True)
     
     # Get episode list
-    episodes = get_episode_list(south_park_url)
+    episodes = get_episode_list(entry_url)
     
     # Fetch transcript URLs for each episode
     print("\nFetching transcript URLs...")
