@@ -1,0 +1,8 @@
+* a project to get tv series from imsdb
+
+
+- https://imsdb.com/TV/Futurama.html
+
+- https://imsdb.com/TV/Seinfeld.html 宋飞正传
+
+- https://imsdb.com/genre/Sci-Fi

@@ -3,26 +3,31 @@
 This script fetches and parses the episode list from IMSDb,
 including transcript URLs, and saves it to episode_list.json.
 Run this first to get/update the episode list.
+
+Usage:
+    python 01_generate_episode_list.py
+    python 01_generate_episode_list.py --url "https://imsdb.com/TV/South%20Park.html"
 """
 
 import json
 import re
+import argparse
 from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-# Configuration
-SOUTH_PARK_URL = "https://imsdb.com/TV/South%20Park.html"
+# Default Configuration
+DEFAULT_SOUTH_PARK_URL = "https://imsdb.com/TV/South%20Park.html"
 BASE_URL = "https://imsdb.com"
 OUTPUT_FILE = Path(__file__).parent / "transcripts" / "episode_list.json"
 DELAY_BETWEEN_REQUESTS = 1.0
 
 
-def get_episode_list() -> list:
+def get_episode_list(south_park_url: str) -> list:
     """Get list of all South Park episodes with correct season numbers."""
-    print(f"Fetching episode list from {SOUTH_PARK_URL}...")
+    print(f"Fetching episode list from {south_park_url}...")
     
-    response = requests.get(SOUTH_PARK_URL, timeout=30)
+    response = requests.get(south_park_url, timeout=30)
     response.raise_for_status()
     
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -187,15 +192,28 @@ def get_transcript_url(imsdb_url: str) -> str:
 
 def main():
     """Main entry point."""
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Generate episode list for South Park from IMSDb.")
+    parser.add_argument(
+        "--url", 
+        type=str, 
+        default=DEFAULT_SOUTH_PARK_URL,
+        help="URL of the TV transcript page"
+    )
+    args = parser.parse_args()
+    
+    south_park_url = args.url
+    
     print("=" * 60)
     print("South Park Episode List Generator")
     print("=" * 60)
+    print(f"Using URL: {south_park_url}")
     
     # Ensure output directory exists
     OUTPUT_FILE.parent.mkdir(exist_ok=True)
     
     # Get episode list
-    episodes = get_episode_list()
+    episodes = get_episode_list(south_park_url)
     
     # Fetch transcript URLs for each episode
     print("\nFetching transcript URLs...")
