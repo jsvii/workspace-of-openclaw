@@ -1,9 +1,19 @@
 * openclaw
 
+** update
 
-** gateway
+openclaw update
+openclaw update status
+openclaw update wizard
+openclaw update --channel beta
+openclaw update --channel dev
+openclaw update --tag beta
+openclaw update --tag main
+openclaw update --dry-run
+openclaw update --no-restart
+openclaw update --json
+openclaw --update
 
-openclaw gateway restart
 
 
 ** scrapling

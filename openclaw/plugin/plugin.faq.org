@@ -1,0 +1,42 @@
+* plugin faq
+
+
+This error occurs when the OpenClaw archive extraction tool (typically used for installing skills or updates) identifies a security risk, specifically a potential path traversal or Zip Slip vulnerability. [1, 2]
+OpenClaw's security guards reject any archive entry that resolves to a path outside the intended extraction root or is not a standard file (e.g., a symlink or directory where a file is expected). [3, 4]
+Common Root Causes
+
+- Symlink Conflicts: On macOS or Linux, if your extraction path involves a symlink (like /tmp resolving to /private/tmp), the strict path validation may fail because the "real" path differs from the provided one. [5, 6]
+
+- Aggressive Security Checks: Recent versions (especially 2026.2.26) introduced more rigid validation that sometimes results in "false positives" for legitimate paths, particularly on Windows or within Docker containers. [7, 8]
+
+-  Malformed Archives: The archive might contain absolute paths or relative segments (e.g., ../../) that attempt to write files outside the workspace. [1, 9]
+
+Potential Fixes and Workarounds
+
+   1. Canonicalize Paths: If you are configuring a custom workspace, ensure the path is fully canonical (e.g., matching the exact drive letter casing and avoiding trailing slashes). [8]
+
+   2. Toggle Security Guards: You can temporarily disable the strict workspace guard in your config file (usually ~/.openclaw/openclaw.json or config.yaml). Look for tools.fs.workspaceOnly and set it to false. [8]
+
+   * Warning: This increases your exposure to unsafe file writes.
+
+   3. Use Allowed Media Directories: If the error occurs while trying to "send" or "open" files from an archive, ensure the files are moved to ~/.openclaw/media/outbound/, which is typically in the allowed directory list. [10, 11]
+
+
+   4. Downgrade OpenClaw: If the issue started after a recent update, some users have reported success by pinning their version to 2026.2.24 until a fix for the path regression is released. [8]
+
+   5. Verify Profile Settings: Run openclaw config get tools. If it shows profile: "messaging", you might lack the filesystem permissions needed for extraction. Switching to profile: "coding" can restore classic local behavior. [8, 12]
+
+Are you seeing this error while installing a specific skill or during a standard update process?
+
+[1] [https://advisories.gitlab.com](https://advisories.gitlab.com/pkg/npm/openclaw/GHSA-v892-hwpg-jwqp/#:~:text=GHSA%2Dv892%2Dhwpg%2Djwqp:%20OpenClaw%20vulnerable%20to%20path%20traversal%20%28Zip,write%20files%20outside%20the%20intended%20extraction%20directory.)
+[2] [https://github.com](https://github.com/openclaw/openclaw/issues/9513/linked_closing_reference?reference_location=REPO_ISSUES_INDEX)
+[3] [https://github.com](https://github.com/advisories/GHSA-jxrq-8fm4-9p58)
+[4] [https://github.com](https://github.com/moltbot/moltbot/issues/3277)
+[5] [https://github.com](https://github.com/openclaw/openclaw/issues/23222)
+[6] [https://github.com](https://github.com/openclaw/openclaw/issues/22848#:~:text=When%20the%20security%20fix%20for%20GHSA%2Dcv7m%2Dc9jx%2Dvg7q%20was,There%20is%20NO%20actual%20path%20traversal/escape%20attempt.)
+[7] [https://github.com](https://github.com/openclaw/openclaw/issues/15237)
+[8] [https://github.com](https://github.com/openclaw/openclaw/issues/30761#:~:text=Workarounds%20that%20usually%20unblock%20you%20immediately:%20*,then%20retry%20a%20write%20to%20memory/2026%2D03%2D01.md%20.)
+[9] [https://github.com](https://github.com/openclaw/openclaw/issues/9513/linked_closing_reference?reference_location=REPO_ISSUES_INDEX)
+[10] [https://github.com](https://github.com/openclaw/openclaw/issues/15541)
+[11] [https://github.com](https://github.com/openclaw/openclaw/issues/21927)
+[12] [https://github.com](https://github.com/openclaw/openclaw/issues/34810)

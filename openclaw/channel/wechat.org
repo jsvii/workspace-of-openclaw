@@ -1,0 +1,19 @@
+** install
+
+ npx -y @tencent-weixin/openclaw-weixin-cli@latest install
+[openclaw-weixin] 已找到本地安装的 openclaw
+[openclaw-weixin] 正在安装插件...
+[openclaw-weixin] 插件安装失败，请手动执行：
+failed to extract archive: SafeOpenError: path is not a regular file under root
+
+openclaw plugins install @tencent-weixin/openclaw-weixin
+
+
+
+@tencent-weixin/openclaw-weixin-cli
+
+https://registry.npmjs.org/@tencent-weixin/openclaw-weixin-cli
+
+https://registry.npmjs.org/@tencent-weixin/openclaw-weixin-cli/-/openclaw-weixin-cli-1.0.2.tgz
+
+node ./cli.mjs install

@@ -1,0 +1,12 @@
+* plugins
+
+openclaw plugins list
+openclaw plugins install <path-or-spec>
+openclaw plugins inspect <id>
+openclaw plugins enable <id>
+openclaw plugins disable <id>
+openclaw plugins uninstall <id>
+openclaw plugins doctor
+openclaw plugins update <id>
+openclaw plugins update --all
+openclaw plugins marketplace list <marketplace>
