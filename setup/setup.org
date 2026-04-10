@@ -1,0 +1,15 @@
+* feishu
+
+** 飞书开放平台
+
+https://open.feishu.cn
+
+https://open.feishu.cn/app?lang=zh-CN  开发者后台
+
+应用凭证 -> App ID App Secre
+
+
+Feishu DM policy 选择 open(public inbound DMs)
+
+
+** minimax
