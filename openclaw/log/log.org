@@ -1,0 +1,12 @@
+# 实时日志
+openclaw logs
+
+# 最近 N 行
+openclaw logs --limit 100
+openclaw logs --lines 50
+
+# JSON 格式
+openclaw logs --json
+
+# 过滤级别
+openclaw logs --level error

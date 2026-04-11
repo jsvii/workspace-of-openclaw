@@ -1,0 +1,3 @@
+* mem0
+
+openclaw plugins install @mem0/openclaw-mem0

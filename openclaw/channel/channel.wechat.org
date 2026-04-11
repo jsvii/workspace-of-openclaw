@@ -1,0 +1,11 @@
+* openclaw-wexin
+
+** install
+
+https://github.com/Tencent/openclaw-weixin
+
+openclaw plugins install "@tencent-weixin/openclaw-weixin"
+
+openclaw config set plugins.entries.openclaw-weixin.enabled true
+
+openclaw channels login --channel openclaw-weixin

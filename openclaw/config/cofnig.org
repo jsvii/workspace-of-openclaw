@@ -1,0 +1,6 @@
+* config
+
+openclaw config set agents.defaults.model.primary "provider/model-name"
+
+
+browser-use

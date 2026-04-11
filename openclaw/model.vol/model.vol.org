@@ -1,0 +1,64 @@
+要在 OpenClaw 中使用火山引擎（火山方舟）模型，你需要获取 *火山方舟 API Key* + *推理接入点 ID*，并完成开通模型、配置 OpenClaw 两步。
+
+*** 一、注册与实名认证（必须）
+1. 访问火山引擎控制台：https://console.volcengine.com/
+2. 注册/登录 → 完成*个人/企业实名认证*
+   - 个人认证：身份证
+   - 企业认证：营业执照
+3. 进入 *火山方舟*（控制台搜索“方舟”）
+
+*** 二、开通模型（以 DeepSeek-R1 为例）
+1. 进入 *模型广场* → 搜索 *DeepSeek-R1 / 豆包 Pro*
+2. 点击 *开通服务* → 选择 *后付费*
+3. 进入 *在线推理 → 推理接入点* → *创建接入点*
+   - 名称：~openclaw-deepseek~
+   - 选择模型：~deepseek-r1-8bit~ 或 ~doubao-pro~
+   - 计费：*后付费*
+   - 确认创建
+4. 复制 *接入点 ID*（~ep-xxxxxx~）
+
+
+*** 三、获取火山方舟 API Key（OpenClaw 用）
+1. 火山方舟 → 左侧 *API Key 管理*
+2. *创建 API Key* → 命名 ~openclaw~
+3. *立即复制保存 API Key*（只显示一次）
+
+
+*** 四、在 OpenClaw 配置火山引擎
+#+BEGIN_SRC bash
+# 1. 配置模型
+openclaw config set models.default volcengine/ark
+
+# 2. 设置 API Key
+openclaw config set models.volcengine.ark.api_key "你的ARK_API_KEY"
+
+# 3. 设置推理接入点（ep-xxx）
+openclaw config set models.volcengine.ark.endpoint "ep-2026xxxx-xxxx"
+
+# 4. 重启网关生效
+openclaw gateway restart
+#+END_SRC
+
+*** 五、验证可用
+#+BEGIN_SRC bash
+# 测试对话
+openclaw chat --model volcengine/ark --text "写一个快速排序"
+
+# 或用 @AI编程
+openclaw tui
+# 输入 @AI编程 写Python爬虫
+#+END_SRC
+
+*** 六、常见问题
+- *认证不通过*：必须完成实名认证
+- *权限不足*：API Key 要授权对应接入点
+- *调用失败*：检查 ~api_key~、~endpoint~、模型已开通
+- *费用*：火山方舟有*免费额度*，后付费按 token 计费
+
+*** 七、速记
+1. 实名 → 开通模型 → 创建接入点（ep-xxx）
+2. 创建 *ARK API Key*（保存）
+3. OpenClaw 配置 ~api_key~ + ~endpoint~
+4. ~gateway restart~ → 可用
+
+需要我给你一条*一键配置命令*（直接填入你的 API Key 和接入点即可）吗？

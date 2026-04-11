@@ -1,18 +1,96 @@
 * openclaw
 
-** update
 
-openclaw update
-openclaw update status
-openclaw update wizard
-openclaw update --channel beta
-openclaw update --channel dev
-openclaw update --tag beta
-openclaw update --tag main
-openclaw update --dry-run
-openclaw update --no-restart
-openclaw update --json
-openclaw --update
+** onboard
+
+#+BEGIN_SRC bash
+# 全局安装
+npm install -g openclaw@latest
+
+# 查看版本
+openclaw --version
+
+# 首次交互式初始化（必跑）
+openclaw onboard
+
+# 初始化本地配置与工作区
+openclaw setup
+
+# 安装/启用后台守护进程（开机自启）
+openclaw onboard --install-daemon
+#+END_SRC
+
+
+** gateway
+
+# 后台启动
+openclaw gateway start
+
+# 前台运行（调试看日志）
+openclaw gateway run
+
+# 停止
+openclaw gateway stop
+
+# 重启（改配置后必用）
+openclaw gateway restart
+
+# 状态
+openclaw gateway status
+
+# 安装系统服务（开机自启）
+openclaw gateway install
+
+# 卸载服务
+openclaw gateway uninstall
+
+# 指定端口启动
+openclaw gateway start --port 18789
+
+
+** openclaw config
+
+配置
+
+** channels
+
+chat
+
+https://docs.openclaw.ai/channels
+
+** openclaw health
+
+
+#+BEGIN_SRC bash
+# 总览状态（通道+会话）
+openclaw status
+openclaw status --all    # 完整信息
+openclaw status --deep   # 深度检测
+openclaw status --json   # JSON 输出
+
+# 健康检查
+openclaw health
+
+# 系统诊断+自动修复
+openclaw doctor
+openclaw doctor --fix    # 尝试修复
+openclaw doctor --dry-run# 预览修复
+#+END_SRC
+
+
+** logs
+
+
+
+
+
+** basic
+
+openclaw doctor --fix      # Migrate legacy aliases + x_search/Firecrawl path moves
+openclaw config validate   # Confirm canonical config is valid
+openclaw plugins install --force <plugin-or-hook>  # v2026.4.5 safe replace flow
+openclaw flows list       # v2026.4.2 Task Flow substrate sanity check
+openclaw memory rem-harness # Optional: verify dreaming/REM pipeline (experimental)
 
 
 
