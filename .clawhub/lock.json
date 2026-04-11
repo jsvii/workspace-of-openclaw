@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "xiaohongshu-all-in-one": {
+      "version": "2.0.0",
+      "installedAt": 1775803622216
+    },
+    "xiaohongshu-crawler": {
+      "version": "1.0.1",
+      "installedAt": 1775803648280
+    },
+    "xiaohongshu-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1775805062843
+    },
+    "computer-use-skill": {
+      "version": "1.0.1",
+      "installedAt": 1775808793034
+    }
+  }
+}
